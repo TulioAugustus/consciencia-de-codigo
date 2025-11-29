@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As Quatro Liberdades - Uma Aventura Digital</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+
+        <div id="narrator-box" class="panel"></div>
+
+        <div id="character-container">
+            <img id="character-img" src="" alt="Personagem" class="hidden">
+            
+            <div id="dialog-box" class="speech-bubble hidden">
+                <p id="dialog-text"></p>
+            </div>
+        </div>
+
+        <div id="options-container"></div>
+
+        <button id="back-button" class="marker-font">Voltar</button>
+
+        <div id="game-over-panel" class="panel game-over hidden">
+            <h2 class="marker-font">FIM DE JOGO</h2>
+            <p id="game-over-text"></p>
+            <button id="restart-button" class="marker-font">Tentar Novamente</button>
+        </div>
+
+    </div>
+
+    <script type="module" src="../js/main.js"></script>
+    <audio id="bg-music" src="../assets.audio/bg.mp3" loop></audio>
+
+    <!-- VLibras: Acessibilidade em LIBRAS -->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>
